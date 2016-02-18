@@ -25,12 +25,13 @@ var fieldToLongLabel = {"id" : "Name of the tag. Ordered by numbers of documents
 			//,"stockers_count" : "Sum of stocked to documents which have the tag."		
 			//,"items_stockers_ratio" : "Total stockerd with the tag par documents.
                        };
+var N = 10;
 
 d3.json("data/tags.json", function(error,d){
     if( "N" in query )
-	data = d.slice(0,query["N"]);
-    else 
-	data = d.slice(0,10);
+	N = query["N"];
+	
+    data = d.slice(0,N);
     
     data.forEach( function(d,index,dt) {
 	dt[index]["items_followers_ratio"] = Math.round(100*d["followers_count"]/d["items_count"])/100;
@@ -43,6 +44,10 @@ d3.json("data/tags.json", function(error,d){
     var right_padding = 50;    
     var width = 1000;
     var height = 500;
+    if( N > 30 )
+    {
+	height = N*15;
+    }
 
     var svg = d3.select('div')
 	.append('svg')
