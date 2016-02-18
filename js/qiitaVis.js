@@ -26,7 +26,7 @@ var fieldToLongLabel = {"id" : "Name of the tag. Ordered by numbers of documents
 			//,"items_stockers_ratio" : "Total stockerd with the tag par documents.
                        };
 
-d3.json("tags.json", function(error,d){
+d3.json("../data/tags.json", function(error,d){
     if( "N" in query )
 	data = d.slice(0,query["N"]);
     else 
