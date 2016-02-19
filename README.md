@@ -1,3 +1,5 @@
 # qiitaStatViz
 Visualizing statistics of qiita tags.
-https://github.com/takoika/qiitaStatViz
+
+http://takoika.github.io/qiitaStatViz/
+
