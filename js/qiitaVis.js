@@ -84,7 +84,10 @@ d3.json("data/tags.json", function(error,d){
 	.ticks(fields.length)
 	.tickFormat(function(d) {return fieldToLabel[d];});
 
-    var txt = svg.selectAll('.text').data(data).enter().append("text")
+    var txt = svg.selectAll('.text').data(data).enter()
+	.append("svg:a")
+	.attr("xlink:href", function(d) {return "http://qiita.com/tags/"+d.id;})
+	.append("text")
 	.attr("x",function(d) {return x_scale("id");})
 	.attr("y",function(d) {return y_scale["id"](d.id);})
 	.attr("class",function(d){return d.id;})
@@ -93,7 +96,10 @@ d3.json("data/tags.json", function(error,d){
 	.on("mouseout",   function(d,i){ mouseout(i);});
     
     n_fields.forEach( function(tag,tindex,ar){    
-	var cs = svg.selectAll('.'+tag).data(data).enter().append("circle")
+	var cs = svg.selectAll('.'+tag).data(data).enter()
+	    .append("svg:a")
+	    .attr("xlink:href", function(d) {return "http://qiita.com/tags/"+d.id;})
+	    .append("circle")
 	    .attr({ cx : function(d) {return x_scale(tag);},
 		    cy : function(d) {return y_scale[tag](d[tag]);},
 		    fill : function(d) {return color(tindex);},
