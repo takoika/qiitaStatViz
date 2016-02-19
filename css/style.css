@@ -1,0 +1,41 @@
+  body { font: 12px Arial;}
+
+  path.active  {
+  stroke: orangered;
+  stroke-width: 2;
+  fill: none;
+  }
+
+
+  path {
+  stroke: steelblue;
+  stroke-width: 2;
+  fill: none;
+  }
+
+  
+  .axis path, .axis line {
+  fill: none;
+  stroke: grey;
+  stroke-width: 0;
+  shape-rendering:
+  crispEdges;
+  }
+
+  span#tooltip{
+  position: absolute;
+  z-index: 10;
+  visibility: hidden;
+  padding: 0 5px;
+  border: 1px solid #000;
+  border-radius: 3px;
+  background-color: #333;
+  color: #fff;
+  font-size: 11px;
+  opacity: 0.8;
+  }
+
+  div.jumbotron{
+  margin-top: 20px;
+  padding-top: 15px;
+  }
