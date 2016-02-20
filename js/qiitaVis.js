@@ -36,5 +36,6 @@ d3.json("data/tags.json", function(error,d){
 	dt[index]["items_stockers_ratio"] = Math.round(100*d["stockers_count"]/d["items_count"])/100;
     });
     drawParallelChart(data);
+    makeRankingTables(data);
 });
 

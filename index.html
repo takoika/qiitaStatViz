@@ -30,24 +30,30 @@
         <h1>Qiita Tags.</h1>
 	<a href="https://qiita.com">Qiita</a> is a Japanese document sharing service specifying information technology. The figure displayed below shows statistics of tags which are attached documents to identify topics. The data is obtained by using <a href="https://qiita.com/api/v2/docs">Qiita API</a>.
       </div>
-      
+
+      <div class="dropdown">
+	<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"> Displayed number of tags.
+	  <span class="caret"></span></button>
+	<ul class="dropdown-menu">
+	  <li><a href="?N=10">10</a></li>
+	  <li><a href="?N=20">20</a></li>
+	  <li><a href="?N=50">50</a></li>
+	  <li><a href="?N=100">100</a></li>
+	</ul>
+      </div>
+
       <div class="parallel page-header">
 	<h2>Parallel chart.</h2>
-	<div class="dropdown">
-	  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"> Displayed number of tags.
-	    <span class="caret"></span></button>
-	  <ul class="dropdown-menu">
-	    <li><a href="?N=10">10</a></li>
-	    <li><a href="?N=20">20</a></li>
-	    <li><a href="?N=50">50</a></li>
-	    <li><a href="?N=100">100</a></li>
-	  </ul>
-	</div>
       </div>
-    </div>
-    
+      <div class="ranking page-header">
+	<h2>Tag ranking.</h2>
+      </div>
+    </div>    
     <script src="js/util.js"></script>
     <script src="js/parallel.js"></script>
+    <script src="js/ranking.js"></script>    
     <script src="js/qiitaVis.js"></script>
+
+      </script>
   </body>
 </html>

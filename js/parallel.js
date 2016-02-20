@@ -13,7 +13,7 @@ function drawParallelChart(data)
 	height = N*15;
     }
 
-    var svg = d3.select('div')
+    var svg = d3.select('div.parallel')
 	.append('svg')
 	.attr({ width : width+left_padding+right_padding,
 		height : height+top_padding+bottom_padding})
