@@ -9,7 +9,7 @@ function makeRankingTables(data) {
 	    if( a[label] < b[label] ) return 1;
 	    return 0;
 	});
-	tmp = tmp.slice(0,N);
+	tmp = tmp.slice(0,5);
 	var t = rank.append("div").attr("class","col-md-4")
 	    .append("table").attr("class","table");
 	
