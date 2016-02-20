@@ -17,9 +17,15 @@
   .axis path, .axis line {
   fill: none;
   stroke: grey;
+  stroke-width: 2;
+  shape-rendering: crispEdges;
+  }
+
+  .category path,  .category line  {
+  fill: none;
+  stroke: grey;
   stroke-width: 0;
-  shape-rendering:
-  crispEdges;
+  shape-rendering: crispEdges;
   }
 
   span#tooltip{
@@ -38,4 +44,8 @@
   div.jumbotron{
   margin-top: 20px;
   padding-top: 15px;
+  }
+
+  .bar rect{
+      fill: 
   }
